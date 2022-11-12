@@ -15,7 +15,7 @@ ruby(说是需要，但是我好想没安装也成功了)
 
 过程
 1.cd 到 build
-2. 我编的msvc版，所以打开vs自带的命令行工具  输入  "../qt-everywhere-src-5.15.1/configure.bat" -static -prefix "D:\qt5.15.1" -confirm-license -opensource  -debug-and-release -platform win32-msvc  -nomake examples -nomake tests  -plugin-sql-sqlite -plugin-sql-odbc -qt-zlib -qt-libpng -qt-libjpeg -opengl desktop -mp
+2. 我编的msvc版，所以打开vs自带的命令行工具  输入  "../qt-everywhere-src-5.15.1/configure.bat" -static -prefix "D:\qt5.15.1" -confirm-license -opensource  -debug-and-release -platform win32-msvc -static-runtime -nomake examples -nomake tests  -plugin-sql-sqlite -plugin-sql-odbc -qt-zlib -qt-libpng -qt-libjpeg -opengl desktop -mp
 适当修改，具体参数含义见https://doc-snapshots.qt.io/qt5-5.15/configure-options.html     -static是静态库   -shared是动态库  (因为浏览器模块一般来说是不需要的 qwebengine ，可以通过-skip qtwebengine 跳过，但是我失败了(摊手))
 "../src/configure.bat" -static -prefix "D:\Qt\Qt5.15.2\vs64_MT_install" -confirm-license -opensource -debug-and-release -platform win32-msvc -nomake examples -nomake tests -plugin-sql-sqlite -plugin-sql-odbc -qt-zlib -qt-libpng -qt-libjpeg -opengl desktop  -skip qt3d  -skip qtcanvas3d -skip qtdatavis3d -skip qtlocation -skip qtwayland -skip qtwebchannel -skip qtwebengine -skip qtwebsockets -skip qtwebview -mp
 具体含义   https://blog.csdn.net/qq_37654240/article/details/109639331
